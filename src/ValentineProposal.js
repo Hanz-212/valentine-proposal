@@ -33,7 +33,6 @@ const FloatingHeart = ({ style }) => (
 const ValentineProposal = () => {
   const [noClicks, setNoClicks] = useState(0);
   const [yesClicked, setYesClicked] = useState(false);
-  const [playMusic, setPlayMusic] = useState(false);
   const [showFireworks, setShowFireworks] = useState(false);
   const [showSurprise, setShowSurprise] = useState(false);
   const [hearts, setHearts] = useState([]);
@@ -41,11 +40,11 @@ const ValentineProposal = () => {
   const [isQuoteVisible, setIsQuoteVisible] = useState(true);
 
   const messages = [
-    "Are you sure? I know a place just for you and me!",
-    "I even asked my Professor for help!",
+    "Are you sure? I made a playlist just for you!",
+    "I even asked ChatGPT for help!",
     "Think about the free chocolates!",
-    "Tara Samgyupppppp!",
-    "Okay fine... Wala ka nang kawala mehehe. 😜"
+    "I'll let you pick the movie!",
+    "Okay fine... you have no choice now. 😜"
   ];
 
   const funnyLoveQuotes = [
@@ -78,7 +77,7 @@ const ValentineProposal = () => {
     if (yesClicked) {
       const audio = new Audio(loveSong);
       audio.loop = true;
-      audio.play();
+      audio.play().catch(error => console.log('Audio playback error:', error));
       setShowFireworks(true);
       setTimeout(() => setShowSurprise(true), 3000);
 
@@ -97,15 +96,14 @@ const ValentineProposal = () => {
         clearInterval(quoteInterval);
       };
     }
-  }, [yesClicked]);
+  }, [yesClicked, funnyLoveQuotes.length]);
 
   const handleNoClick = useCallback(() => {
     setNoClicks((prev) => Math.min(prev + 1, messages.length - 1));
-  }, []);
+  }, [messages.length]);
 
   const handleYesClick = useCallback(() => {
     setYesClicked(true);
-    setPlayMusic(true);
   }, []);
 
   return (
@@ -164,7 +162,7 @@ const ValentineProposal = () => {
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                Will you be my Valentines Bea Marie? 💖
+                Will you be my Valentine? 💖
               </motion.h1>
 
               <AnimatePresence>
