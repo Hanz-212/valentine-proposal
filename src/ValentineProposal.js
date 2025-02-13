@@ -40,11 +40,11 @@ const ValentineProposal = () => {
   const [isQuoteVisible, setIsQuoteVisible] = useState(true);
 
   const messages = [
-    "Are you sure? I made a playlist just for you!",
-    "I even asked ChatGPT for help!",
+    "Are you sure? I know a place just for you and me!",
+    "I even asked my Professor for help!",
     "Think about the free chocolates!",
-    "I'll let you pick the movie!",
-    "Okay fine... you have no choice now. 😜"
+    "Tara Samgyupppppp!",
+    "Okay fine... Wala ka nang kawala mehehe. 😜"
   ];
 
   const funnyLoveQuotes = [
