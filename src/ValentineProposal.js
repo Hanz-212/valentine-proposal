@@ -164,7 +164,7 @@ const ValentineProposal = () => {
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                Will you be my Valentine? 💖
+                Will you be my Valentines Bea Marie? 💖
               </motion.h1>
 
               <AnimatePresence>
