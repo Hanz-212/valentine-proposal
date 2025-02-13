@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import ValentineProposal from "./ValentineProposal";
-
+import ValentineProposal from './ValentineProposal';
 
 function App() {
   return (
-    <ValentineProposal />
+    <div className="App">
+      <ValentineProposal />
+    </div>
   );
 }
 
