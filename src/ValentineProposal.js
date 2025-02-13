@@ -42,7 +42,7 @@ const ValentineProposal = () => {
   const messages = [
     "Are you sure? I know a place just for you and me!",
     "I even asked my Professor for help!",
-    "Think about the free chocolates!",
+    "Think about The moon, The sun, and every thing nice!",
     "Tara Samgyupppppp!",
     "Okay fine... Wala ka nang kawala mehehe. 😜"
   ];
